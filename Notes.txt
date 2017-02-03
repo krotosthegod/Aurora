@@ -8,6 +8,7 @@ Mana
 
 
 JSON Example
+
 {
 	"provider":{
 		"name":"Terraria",

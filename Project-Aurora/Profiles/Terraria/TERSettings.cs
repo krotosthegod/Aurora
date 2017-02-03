@@ -56,7 +56,7 @@ namespace Aurora.Profiles.Terraria
 
             Layers = new System.Collections.ObjectModel.ObservableCollection<Settings.Layers.Layer>
             {
-                new Settings.Layers.Layer("Payday 2 Flashbang", new Payday_2.Layers.PD2FlashbangLayerHandler()),
+                // new Settings.Layers.Layer("Payday 2 Flashbang", new Payday_2.Layers.PD2FlashbangLayerHandler()),
                 new Settings.Layers.Layer("Health Indicator", new Settings.Layers.PercentLayerHandler()
                 {
                     Properties = new Settings.Layers.PercentLayerHandlerProperties()
@@ -75,12 +75,12 @@ namespace Aurora.Profiles.Terraria
                         _MaxVariablePath = "LocalPlayer/Health/Max"
                     },
                 }),
-                new Settings.Layers.Layer("Ammo Indicator", new Settings.Layers.PercentLayerHandler()
+                new Settings.Layers.Layer("Mana Indicator", new Settings.Layers.PercentLayerHandler()
                 {
                     Properties = new Settings.Layers.PercentLayerHandlerProperties()
                     {
                         _PrimaryColor =  Color.FromArgb(0, 0, 255),
-                        _SecondaryColor = Color.FromArgb(255, 0, 0),
+                        _SecondaryColor = Color.FromArgb(0, 0, 255),
                         _PercentType = PercentEffectType.Progressive_Gradual,
                         _Sequence = new KeySequence(new Devices.DeviceKeys[] {
                             Devices.DeviceKeys.ONE, Devices.DeviceKeys.TWO, Devices.DeviceKeys.THREE, Devices.DeviceKeys.FOUR,
@@ -89,11 +89,11 @@ namespace Aurora.Profiles.Terraria
                         }),
                         _BlinkThreshold = 0.0,
                         _BlinkDirection = false,
-                        _VariablePath = "LocalPlayer/Weapons/SelectedWeapon/Current_Clip",
-                        _MaxVariablePath = "LocalPlayer/Weapons/SelectedWeapon/Max_Clip"
+                        _VariablePath = "LocalPlayer/Mana/Current",
+                        _MaxVariablePath = "LocalPlayer/Mana/Max"
                     },
                 }),
-                new Settings.Layers.Layer("Payday 2 States", new Payday_2.Layers.PD2StatesLayerHandler()),
+                // new Settings.Layers.Layer("Payday 2 States", new Payday_2.Layers.PD2StatesLayerHandler()),
                 new Settings.Layers.Layer("Payday 2 Background", new Payday_2.Layers.PD2BackgroundLayerHandler())
             };
 
