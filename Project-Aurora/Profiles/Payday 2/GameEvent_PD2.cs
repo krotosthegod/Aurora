@@ -5,6 +5,7 @@ using Aurora.Profiles.Payday_2.GSI;
 using System.Drawing;
 using Aurora.Profiles.Payday_2.GSI.Nodes;
 using System.Linq;
+using System.Diagnostics;
 
 namespace Aurora.Profiles.Payday_2
 {
@@ -35,6 +36,9 @@ namespace Aurora.Profiles.Payday_2
             frame.AddLayers(layers.ToArray());
 
             System.Diagnostics.Debug.WriteLine("PD2 -- UpdateLights() - 1");
+
+            StackTrace stackTrace = new StackTrace();
+            System.Diagnostics.Debug.WriteLine(stackTrace.GetFrame(1).GetMethod().Name);
         }
 
         public override void UpdateLights(EffectFrame frame, IGameState new_game_state)

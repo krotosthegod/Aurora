@@ -56,7 +56,7 @@ namespace Aurora.Profiles.Terraria
 
             Layers = new System.Collections.ObjectModel.ObservableCollection<Settings.Layers.Layer>
             {
-                // new Settings.Layers.Layer("Payday 2 Flashbang", new Payday_2.Layers.PD2FlashbangLayerHandler()),
+                // new Settings.Layers.Layer("Payday 2 Flashbang", new Terraria.Layers.TERFlashbangLayerHandler()),
                 new Settings.Layers.Layer("Health Indicator", new Settings.Layers.PercentLayerHandler()
                 {
                     Properties = new Settings.Layers.PercentLayerHandlerProperties()
@@ -71,8 +71,8 @@ namespace Aurora.Profiles.Terraria
                         }),
                         _BlinkThreshold = 0.0,
                         _BlinkDirection = false,
-                        _VariablePath = "LocalPlayer/Health/Current",
-                        _MaxVariablePath = "LocalPlayer/Health/Max"
+                        _VariablePath = "Player/Health/Current",
+                        _MaxVariablePath = "Player/Health/Max"
                     },
                 }),
                 new Settings.Layers.Layer("Mana Indicator", new Settings.Layers.PercentLayerHandler()
@@ -89,12 +89,12 @@ namespace Aurora.Profiles.Terraria
                         }),
                         _BlinkThreshold = 0.0,
                         _BlinkDirection = false,
-                        _VariablePath = "LocalPlayer/Mana/Current",
-                        _MaxVariablePath = "LocalPlayer/Mana/Max"
+                        _VariablePath = "Player/Mana/Current",
+                        _MaxVariablePath = "Player/Mana/Max"
                     },
                 }),
-                // new Settings.Layers.Layer("Payday 2 States", new Payday_2.Layers.PD2StatesLayerHandler()),
-                new Settings.Layers.Layer("Payday 2 Background", new Payday_2.Layers.PD2BackgroundLayerHandler())
+                // new Settings.Layers.Layer("Payday 2 States", new Terraria.Layers.TERStatesLayerHandler()),
+                new Settings.Layers.Layer("Terraria Background", new Terraria.Layers.TERBackgroundLayerHandler())
             };
 
             //Effects 

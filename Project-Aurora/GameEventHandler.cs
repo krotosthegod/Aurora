@@ -288,7 +288,6 @@ namespace Aurora
                         desktop_e.UpdateLights(newframe);
                     }
                 }
-
             }
 
             //Add overlays
