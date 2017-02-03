@@ -352,7 +352,8 @@ namespace Aurora.Settings
             { "MetroLL", new Profiles.Metro_Last_Light.MetroLLProfileManager() },
             { "GW2", new Profiles.Guild_Wars_2.GW2ProfileManager() },
             { "WormsWMD", new Profiles.WormsWMD.WormsWMDProfileManager() },
-            { "BnS", new Profiles.Blade_and_Soul.BnSProfileManager() }
+            { "BnS", new Profiles.Blade_and_Soul.BnSProfileManager() },
+            { "Terraria", new Profiles.Terraria.TERProfileManager() }
         };
 
         //Overlay Settings

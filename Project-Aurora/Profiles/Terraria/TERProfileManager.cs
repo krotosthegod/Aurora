@@ -1,4 +1,4 @@
-﻿using Aurora.Profiles.Terraroa.GSI;
+﻿using Aurora.Profiles.Terraria.GSI;
 using Aurora.Settings;
 using Newtonsoft.Json;
 using System;
@@ -19,7 +19,9 @@ namespace Aurora.Profiles.Terraria
             // this.AvailableLayers.Add(Aurora.Settings.Layers.LayerType.PD2Flashbang);
             this.AvailableLayers.Add(Aurora.Settings.Layers.LayerType.TERStates);
 
-            IconURI = "Resources/ter_64x64.png";
+            IconURI = "Resources/unknown_app_icon.png";
+
+            System.Diagnostics.Debug.WriteLine("Creating TERProfileManager");
         }
     }
 }

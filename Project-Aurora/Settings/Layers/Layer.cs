@@ -118,6 +118,12 @@ namespace Aurora.Settings.Layers
         [Description("Payday 2 States Layer")]
         PD2States = 1002,
 
+        [Description("Terraria Background Layer")]
+        TERBackground = 1005,
+
+        [Description("Terraria States Layer")]
+        TERStates = 1006,
+
     }
 
     /// <summary>

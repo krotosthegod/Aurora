@@ -14,22 +14,22 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Aurora.Profiles.Payday_2.Layers
+namespace Aurora.Profiles.Terraria.Layers
 {
     /// <summary>
-    /// Interaction logic for Control_PD2StatesLayer.xaml
+    /// Interaction logic for Control_CSGOBackgroundLayer.xaml
     /// </summary>
-    public partial class Control_PD2StatesLayer : UserControl
+    public partial class Control_TERBackgroundLayer : UserControl
     {
         private bool settingsset = false;
         private bool profileset = false;
 
-        public Control_PD2StatesLayer()
+        public Control_TERBackgroundLayer()
         {
             InitializeComponent();
         }
 
-        public Control_PD2StatesLayer(PD2StatesLayerHandler datacontext)
+        public Control_TERBackgroundLayer(TERBackgroundLayerHandler datacontext)
         {
             this.DataContext = datacontext.Properties;
             InitializeComponent();
@@ -46,9 +46,9 @@ namespace Aurora.Profiles.Payday_2.Layers
             this.Loaded -= UserControl_Loaded;
         }
 
-        private void sldSwanSongSpeed_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        private void sldAssaultSpeed_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            this.lblSwanSongSpeed.Content = $"x {sldSwanSongSpeed.Value.ToString("0.00")}";
+            this.lblAssaultSpeed.Content = $"x {sldAssaultSpeed.Value.ToString("0.00")}";
         }
     }
 }

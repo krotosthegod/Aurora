@@ -33,6 +33,8 @@ namespace Aurora.Profiles.Payday_2
             layers.Enqueue(new EffectLayer("PD2 - Color Zones").DrawColorZones((this.Profile.Settings as PD2Settings).lighting_areas.ToArray()));
 
             frame.AddLayers(layers.ToArray());
+
+            System.Diagnostics.Debug.WriteLine("PD2 -- UpdateLights() - 1");
         }
 
         public override void UpdateLights(EffectFrame frame, IGameState new_game_state)
@@ -52,6 +54,7 @@ namespace Aurora.Profiles.Payday_2
                     Global.logger.LogLine(gs.ToString(), Logging_Level.None);
                 }
             }
+            System.Diagnostics.Debug.WriteLine("PD2 -- UpdateLights() - 2");
         }
 
         public override void ResetGameState()

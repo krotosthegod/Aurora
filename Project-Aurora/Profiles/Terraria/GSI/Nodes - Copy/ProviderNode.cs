@@ -1,4 +1,4 @@
-﻿namespace Aurora.Profiles.Terraria.GSI.Nodes
+﻿namespace Aurora.Profiles.Payday_2.GSI.Nodes
 {
     /// <summary>
     /// Information about the provider of this GameState

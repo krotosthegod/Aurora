@@ -11,11 +11,7 @@ namespace Aurora.Profiles.Terraria.GSI
     public class GameState_TER : GameState<GameState_TER>
     {
         private ProviderNode _Provider;
-        private LobbyNode _Lobby;
-        private LevelNode _Level;
-        private PlayersNode _Players;
-        private GameNode _Game;
-        private GameState_TER _Previously;
+        private PlayerNode _Player;
 
         /// <summary>
         /// Information about the provider of this GameState
@@ -27,6 +23,7 @@ namespace Aurora.Profiles.Terraria.GSI
                 if (_Provider == null)
                     _Provider = new ProviderNode(_ParsedData["provider"]?.ToString() ?? "");
 
+                System.Diagnostics.Debug.WriteLine(_Provider);
                 return _Provider;
             }
         }
@@ -34,14 +31,15 @@ namespace Aurora.Profiles.Terraria.GSI
         /// <summary>
         /// Information about the local player
         /// </summary>
-        public PlayerNode LocalPlayer
+        public PlayerNode Player
         {
             get
             {
-                if (_Players == null)
-                    _Players = new PlayersNode(_ParsedData["player"]?.ToString() ?? "");
+                if (_Player == null)
+                    _Player = new PlayerNode(_ParsedData["player"]?.ToString() ?? "");
 
-                return _Players.LocalPlayer;
+                System.Diagnostics.Debug.WriteLine(_Player);
+                return _Player;
             }
         }
 
@@ -52,6 +50,10 @@ namespace Aurora.Profiles.Terraria.GSI
         {
             json = "{}";
             _ParsedData = Newtonsoft.Json.Linq.JObject.Parse(json);
+
+
+            System.Diagnostics.Debug.WriteLine("Creating GameState_TER - 1");
+            System.Diagnostics.Debug.WriteLine(_ParsedData);
         }
 
         /// <summary>
@@ -65,6 +67,7 @@ namespace Aurora.Profiles.Terraria.GSI
 
             json = JSONstring;
             _ParsedData = JObject.Parse(JSONstring);
+            System.Diagnostics.Debug.WriteLine("Creating GameState_TER - 2");
         }
 
         /// <summary>
@@ -73,6 +76,7 @@ namespace Aurora.Profiles.Terraria.GSI
         /// <param name="other_state">The passed GameState</param>
         public GameState_TER(IGameState other_state) : base(other_state)
         {
+            System.Diagnostics.Debug.WriteLine("Creating GameState_TER - 3");
         }
     }
 }

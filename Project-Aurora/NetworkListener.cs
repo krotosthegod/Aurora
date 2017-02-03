@@ -184,6 +184,9 @@ namespace Aurora
                 response.Close();
             }
             CurrentGameState = new GameState(JSON);
+
+            System.Diagnostics.Debug.WriteLine("Net List Rec ---------------------------------------------");
+            System.Diagnostics.Debug.WriteLine(CurrentGameState);
         }
 
         private void RaiseOnNewGameState()

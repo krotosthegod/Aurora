@@ -12,6 +12,7 @@ namespace Aurora.Profiles.Terraria
     {
         public GameEvent_TER() : base()
         {
+            System.Diagnostics.Debug.WriteLine("Creating GameEvent");
         }
 
         public override void UpdateLights(EffectFrame frame)
@@ -33,6 +34,8 @@ namespace Aurora.Profiles.Terraria
             layers.Enqueue(new EffectLayer("TER - Color Zones").DrawColorZones((this.Profile.Settings as TERSettings).lighting_areas.ToArray()));
 
             frame.AddLayers(layers.ToArray());
+
+            System.Diagnostics.Debug.WriteLine("UpdateLights() - 1");
         }
 
         public override void UpdateLights(EffectFrame frame, IGameState new_game_state)
@@ -52,6 +55,7 @@ namespace Aurora.Profiles.Terraria
                     Global.logger.LogLine(gs.ToString(), Logging_Level.None);
                 }
             }
+            System.Diagnostics.Debug.WriteLine("UpdateLights() - 2");
         }
 
         public override void ResetGameState()

@@ -437,33 +437,21 @@
     </Compile>
     <Compile Include="Profiles\RocketLeague\Layers\RocketLeagueBackgroundLayerHandler.cs" />
     <Compile Include="Profiles\StringProperty.cs" />
-    <Compile Include="Profiles\Terraria\Control_PD2.xaml.cs">
-      <DependentUpon>Control_PD2.xaml</DependentUpon>
+    <Compile Include="Profiles\Terraria\Control_TER.xaml.cs">
+      <DependentUpon>Control_TER.xaml</DependentUpon>
     </Compile>
     <Compile Include="Profiles\Terraria\GameEvent_TER.cs" />
-    <Compile Include="Profiles\Terraria\GSI\GameState_PD2.cs" />
-    <Compile Include="Profiles\Terraria\GSI\Nodes\GameNode.cs" />
-    <Compile Include="Profiles\Terraria\GSI\Nodes\ItemNode.cs" />
-    <Compile Include="Profiles\Terraria\GSI\Nodes\ItemsNode.cs" />
-    <Compile Include="Profiles\Terraria\GSI\Nodes\LevelNode.cs" />
-    <Compile Include="Profiles\Terraria\GSI\Nodes\LobbyNode.cs" />
+    <Compile Include="Profiles\Terraria\GSI\GameState_TER.cs" />
     <Compile Include="Profiles\Terraria\GSI\Nodes\PlayerNode.cs" />
-    <Compile Include="Profiles\Terraria\GSI\Nodes\PlayersNode.cs" />
     <Compile Include="Profiles\Terraria\GSI\Nodes\ProviderNode.cs" />
-    <Compile Include="Profiles\Terraria\GSI\Nodes\WeaponNode.cs" />
-    <Compile Include="Profiles\Terraria\GSI\Nodes\WeaponsNode.cs" />
-    <Compile Include="Profiles\Terraria\Layers\Control_PD2BackgroundLayer.xaml.cs">
-      <DependentUpon>Control_PD2BackgroundLayer.xaml</DependentUpon>
+    <Compile Include="Profiles\Terraria\Layers\Control_TERBackgroundLayer.xaml.cs">
+      <DependentUpon>Control_TERBackgroundLayer.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Profiles\Terraria\Layers\Control_PD2FlashbangLayer.xaml.cs">
-      <DependentUpon>Control_PD2FlashbangLayer.xaml</DependentUpon>
+    <Compile Include="Profiles\Terraria\Layers\Control_TERStatesLayer.xaml.cs">
+      <DependentUpon>Control_TERStatesLayer.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Profiles\Terraria\Layers\Control_PD2StatesLayer.xaml.cs">
-      <DependentUpon>Control_PD2StatesLayer.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Profiles\Terraria\Layers\PD2BackgroundLayerHandler.cs" />
-    <Compile Include="Profiles\Terraria\Layers\PD2FlashbangLayerHandler.cs" />
-    <Compile Include="Profiles\Terraria\Layers\PD2StatesLayerHandler.cs" />
+    <Compile Include="Profiles\Terraria\Layers\TERBackgroundLayerHandler.cs" />
+    <Compile Include="Profiles\Terraria\Layers\TERStatesLayerHandler.cs" />
     <Compile Include="Profiles\Terraria\TERProfileManager.cs" />
     <Compile Include="Profiles\Terraria\TERSettings.cs" />
     <Compile Include="Profiles\Worms_WMD\Control_WormsWMD.xaml.cs">
@@ -654,7 +642,7 @@
     <None Include="kb_layouts\Plain Keyboard\layout.us.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <Resource Include="Profiles\Terraria\GSI\PD2_GSI.zip" />
+    <None Include="Profiles\Terraria\GSI\PD2_GSI.zip" />
     <None Include="Scripts\Devices\example_script.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -1046,19 +1034,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Profiles\Terraria\Control_PD2.xaml">
+    <Page Include="Profiles\Terraria\Control_TER.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Profiles\Terraria\Layers\Control_PD2BackgroundLayer.xaml">
+    <Page Include="Profiles\Terraria\Layers\Control_TERBackgroundLayer.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Profiles\Terraria\Layers\Control_PD2FlashbangLayer.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Profiles\Terraria\Layers\Control_PD2StatesLayer.xaml">
+    <Page Include="Profiles\Terraria\Layers\Control_TERStatesLayer.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -1343,6 +1327,7 @@
     <Resource Include="Resources\Layers_Drag.png" />
     <Resource Include="Resources\Layers_Add.png" />
     <Resource Include="Resources\Layers_Remove.png" />
+    <Content Include="Resources\ter_64x64.png" />
     <Content Include="SDKDLL.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
