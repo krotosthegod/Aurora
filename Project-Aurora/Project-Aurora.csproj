@@ -453,7 +453,7 @@
     <Compile Include="Profiles\Terraria\Layers\TERBackgroundLayerHandler.cs" />
     <Compile Include="Profiles\Terraria\Layers\TERStatesLayerHandler.cs" />
     <Compile Include="Profiles\Terraria\TERProfileManager.cs" />
-    <Compile Include="Profiles\Terraria\TERSettings.cs" />
+    <Compile Include="Profiles\Terraria\TERSettings15.cs" />
     <Compile Include="Profiles\Worms_WMD\Control_WormsWMD.xaml.cs">
       <DependentUpon>Control_WormsWMD.xaml</DependentUpon>
     </Compile>

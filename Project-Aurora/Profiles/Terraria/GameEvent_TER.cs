@@ -19,7 +19,7 @@ namespace Aurora.Profiles.Terraria
         {
             Queue<EffectLayer> layers = new Queue<EffectLayer>();
 
-            TERSettings settings = (TERSettings)this.Profile.Settings;
+            TERSettings15 settings = (TERSettings15)this.Profile.Settings;
 
             foreach (var layer in settings.Layers.Reverse().ToArray())
             {
@@ -31,7 +31,7 @@ namespace Aurora.Profiles.Terraria
             this.Profile.UpdateEffectScripts(layers, _game_state);
 
             //ColorZones
-            layers.Enqueue(new EffectLayer("TER - Color Zones").DrawColorZones((this.Profile.Settings as TERSettings).lighting_areas.ToArray()));
+            layers.Enqueue(new EffectLayer("TER - Color Zones").DrawColorZones((this.Profile.Settings as TERSettings15).lighting_areas.ToArray()));
 
             frame.AddLayers(layers.ToArray());
 

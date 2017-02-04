@@ -11,7 +11,7 @@ namespace Aurora.Profiles.Terraria.GSI
     public class GameState_TER : GameState<GameState_TER>
     {
         private ProviderNode _Provider;
-        private PlayerNode _Player;
+        private PlayerNode _LocalPlayer;
 
         /// <summary>
         /// Information about the provider of this GameState
@@ -23,7 +23,7 @@ namespace Aurora.Profiles.Terraria.GSI
                 if (_Provider == null)
                     _Provider = new ProviderNode(_ParsedData["provider"]?.ToString() ?? "");
 
-                System.Diagnostics.Debug.WriteLine(_Provider);
+                // System.Diagnostics.Debug.WriteLine(_Provider);
                 return _Provider;
             }
         }
@@ -31,15 +31,15 @@ namespace Aurora.Profiles.Terraria.GSI
         /// <summary>
         /// Information about the local player
         /// </summary>
-        public PlayerNode Player
+        public PlayerNode LocalPlayer
         {
             get
             {
-                if (_Player == null)
-                    _Player = new PlayerNode(_ParsedData["player"]?.ToString() ?? "");
+                if (_LocalPlayer == null)
+                    _LocalPlayer = new PlayerNode(_ParsedData["player"]?.ToString() ?? "");
 
-                System.Diagnostics.Debug.WriteLine(_Player);
-                return _Player;
+                // System.Diagnostics.Debug.WriteLine(_LocalPlayer);
+                return _LocalPlayer;
             }
         }
 

@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -138,7 +139,13 @@ namespace Aurora.Utils
                     val = property_object.GetValueFromString(param);
 
                     if (val == null)
+                    {
+                        // StackTrace stackTrace = new StackTrace();
+                        // System.Diagnostics.Debug.WriteLine(stackTrace);
+                        // System.Diagnostics.Debug.WriteLine(stackTrace.GetFrame(1).GetMethod().Name);
                         throw new ArgumentNullException($"Failed to get value {parameter_path}, failed at '{param}'");
+                    }
+
 
                     Type property_type = property_object.GetType();
                     Type temp = null;

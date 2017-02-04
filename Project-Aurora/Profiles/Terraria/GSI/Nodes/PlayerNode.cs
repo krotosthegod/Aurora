@@ -50,8 +50,8 @@ namespace Aurora.Profiles.Terraria.GSI.Nodes
             Current = GetFloat("hp");
             Max = GetFloat("hp_max");
 
-            System.Diagnostics.Debug.WriteLine("-------------------------------------------------");
-            System.Diagnostics.Debug.WriteLine(Current);
+            // System.Diagnostics.Debug.WriteLine("-------------------------------------------------");
+            // System.Diagnostics.Debug.WriteLine(Current);
         }
     }
 

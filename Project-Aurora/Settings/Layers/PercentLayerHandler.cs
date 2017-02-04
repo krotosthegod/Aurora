@@ -69,6 +69,10 @@ namespace Aurora.Settings.Layers
             {
                 try
                 {
+                    // if(Properties.VariablePath == "LocalPlayer/Mana/Current")
+                    // {
+                    //     System.Diagnostics.Debug.WriteLine(Properties);
+                    // }
                     value = Convert.ToDouble(Utils.GameStateUtils.RetrieveGameStateParameter(state, Properties.VariablePath));
                 }
                 catch (Exception exc)

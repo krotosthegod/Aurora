@@ -117,7 +117,7 @@ namespace Aurora.Profiles.Terraria.Layers
 
         public override EffectLayer Render(IGameState state)
         {
-            EffectLayer bg_layer = new EffectLayer("Payday 2 - Background");
+            EffectLayer bg_layer = new EffectLayer("Terraria - Background");
 
             if (state is GameState_TER)
             {
@@ -127,121 +127,6 @@ namespace Aurora.Profiles.Terraria.Layers
                 Color bg_color = Properties.AmbientColor;
 
                 long currenttime = Utils.Time.GetMillisecondsSinceEpoch();
-
-                // if ((TER.Level.Phase == LevelPhase.Assault || TER.Level.Phase == LevelPhase.Winters) && TER.Game.State == GameStates.Ingame)
-                // {
-                //     if (TER.Level.Phase == LevelPhase.Assault)
-                //         bg_color = Properties.AssaultColor;
-                //     else if (TER.Level.Phase == LevelPhase.Winters)
-                //         bg_color = Properties.WintersColor;
-
-                //     double blend_percent = Math.Pow(Math.Sin(((currenttime % 1300L) / 1300.0D) * Properties.AssaultSpeedMultiplier * 2.0D * Math.PI), 2.0D);
-
-                //     bg_color = Utils.ColorUtils.BlendColors(Properties.AssaultFadeColor, bg_color, blend_percent);
-
-                //     if (Properties.AssaultAnimationEnabled)
-                //     {
-
-                //         Color effect_contours = Color.FromArgb(200, Color.Black);
-                //         float animation_stage_yoffset = 20.0f;
-                //         float animation_repeat_keyframes = 250.0f; //Effects.canvas_width * 2.0f;
-
-                //         /* Effect visual:
-
-                //         / /  ----  / /
-
-                //         */
-
-                //         /*
-                //          * !!!NOTE: TO BE REWORKED INTO ANIMATIONS!!!
-
-                //         EffectColorFunction line1_col_func = new EffectColorFunction(
-                //             new EffectLine(-1f, Effects.canvas_width + assault_yoffset + animation_stage_yoffset),
-                //             new ColorSpectrum(effect_contours),
-                //             2);
-
-                //         EffectColorFunction line2_col_func = new EffectColorFunction(
-                //             new EffectLine(-1f, Effects.canvas_width + assault_yoffset + 9.0f + animation_stage_yoffset),
-                //             new ColorSpectrum(effect_contours),
-                //             2);
-
-                //         EffectColorFunction line3_col_func = new EffectColorFunction(
-                //             new EffectLine(new EffectPoint(Effects.canvas_width + assault_yoffset + 17.0f + animation_stage_yoffset, Effects.canvas_height / 2.0f), new EffectPoint(Effects.canvas_width + assault_yoffset + 34.0f + animation_stage_yoffset, Effects.canvas_height / 2.0f), true),
-                //             new ColorSpectrum(effect_contours),
-                //             6);
-
-                //         EffectColorFunction line4_col_func = new EffectColorFunction(
-                //             new EffectLine(-1f, Effects.canvas_width + assault_yoffset + 52.0f + animation_stage_yoffset),
-                //             new ColorSpectrum(effect_contours),
-                //             2);
-
-                //         EffectColorFunction line5_col_func = new EffectColorFunction(
-                //             new EffectLine(-1f, Effects.canvas_width + assault_yoffset + 61.0f + animation_stage_yoffset),
-                //             new ColorSpectrum(effect_contours),
-                //             2);
-
-                //         assault_yoffset -= 0.50f;
-                //         assault_yoffset = assault_yoffset % animation_repeat_keyframes;
-
-                //         bg_layer.AddPostFunction(line1_col_func);
-                //         bg_layer.AddPostFunction(line2_col_func);
-                //         //bg_layer.AddPostFunction(line3_col_func);
-                //         bg_layer.AddPostFunction(line4_col_func);
-                //         bg_layer.AddPostFunction(line5_col_func);
-
-                //         */
-                //     }
-
-                //     bg_layer.Fill(bg_color);
-
-                //     if (Properties.PeripheralUse)
-                //         bg_layer.Set(Devices.DeviceKeys.Peripheral, bg_color);
-                // }
-                // else if (TER.Level.Phase == LevelPhase.Stealth && TER.Game.State == GameStates.Ingame)
-                // {
-                //     if (Properties.ShowSuspicion)
-                //     {
-                //         double percentSuspicious = ((double)TER.Players.LocalPlayer.SuspicionAmount / (double)1.0);
-
-                //         ColorSpectrum suspicion_spec = new ColorSpectrum(Properties.LowSuspicionColor, Properties.HighSuspicionColor);
-                //         suspicion_spec.SetColorAt(0.5f, Properties.MediumSuspicionColor);
-
-                //         Settings.KeySequence suspicionSequence = new Settings.KeySequence(new Settings.FreeFormObject(0, 0, 1.0f / (Effects.editor_to_canvas_width / Effects.canvas_width), 1.0f / (Effects.editor_to_canvas_height / Effects.canvas_height)));
-
-                //         bg_layer.PercentEffect(suspicion_spec, suspicionSequence, percentSuspicious, 1.0D, Properties.SuspicionEffectType);
-
-                //         if (Properties.PeripheralUse)
-                //             bg_layer.Set(Devices.DeviceKeys.Peripheral, suspicion_spec.GetColorAt((float)percentSuspicious));
-                //     }
-                // }
-                // else if (TER.Level.Phase == LevelPhase.Point_of_no_return && TER.Game.State == GameStates.Ingame)
-                // {
-                //     ColorSpectrum no_return_spec = new ColorSpectrum(Color.Red, Color.Yellow);
-                //     if (TER.Level.NoReturnTime != no_return_timeleft)
-                //     {
-                //         no_return_timeleft = TER.Level.NoReturnTime;
-                //         no_return_flashamount = 1.0f;
-                //     }
-
-                //     Color no_return_color = no_return_spec.GetColorAt(no_return_flashamount);
-                //     no_return_flashamount -= 0.05f;
-
-                //     if (no_return_flashamount < 0.0f)
-                //         no_return_flashamount = 0.0f;
-
-                //     bg_layer.Fill(no_return_color);
-
-                //     if (Properties.PeripheralUse)
-                //         bg_layer.Set(Devices.DeviceKeys.Peripheral, no_return_color);
-                // }
-                // else
-                // {
-                //     bg_layer.Fill(bg_color);
-
-                //     if (Properties.PeripheralUse)
-                //         bg_layer.Set(Devices.DeviceKeys.Peripheral, bg_color);
-                // }
-
             }
 
             return bg_layer;
