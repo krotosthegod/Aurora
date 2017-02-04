@@ -39,7 +39,7 @@
         <TabControl>
             <TabItem Header="Overview for Terraria">
                 <Grid>
-                    <TextBlock Margin="10,30,0,0" Text="In order for Terraria support to work, you have to install the BLT Lua hook and the GSI mod for Terraria. Please contact Demize for mortal assistance. For immortal assistance, please contact our Lord and Savior Krotos." VerticalAlignment="Top" TextWrapping="Wrap" HorizontalAlignment="Left" Width="770"/>
+                    <TextBlock Margin="10,30,0,0" Text="In order for Terraria support to work, you have to install TModLoader and the GSI mod for Terraria. Please contact Demize for mortal assistance. For immortal assistance, please contact our Lord and Savior Krotos." VerticalAlignment="Top" TextWrapping="Wrap" HorizontalAlignment="Left" Width="770"/>
                     <Button x:Name="get_hook_button" Content="Get BLT Hook" HorizontalAlignment="Left" Margin="10,83,0,0" VerticalAlignment="Top" Click="get_hook_button_Click"/>
                     <Button x:Name="install_mod_button" Content="Install GSI for Terraria" HorizontalAlignment="Left" Margin="10,108,0,0" VerticalAlignment="Top" Click="install_mod_button_Click"/>
                     <CheckBox x:Name="game_enabled" Content="Enable Aurora to provide lighting effects with Terraria" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Checked="game_enabled_Checked" Unchecked="game_enabled_Checked"/>
@@ -48,19 +48,13 @@
                 </Grid>
             </TabItem>
             <TabItem Header="Preview">
-                <Grid>
-                    <Label Content="Level Phase:" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top"/>
+                <Grid Margin="0,-90,0,90">
                     <Label Content="Health:" HorizontalAlignment="Left" Margin="10,103,0,0" VerticalAlignment="Top"/>
                     <Slider x:Name="preview_health_slider" HorizontalAlignment="Left" Margin="62,107,0,0" VerticalAlignment="Top" Width="114" Maximum="100" SmallChange="1" ValueChanged="preview_health_slider_ValueChanged"/>
                     <Label x:Name="preview_health_amount" Content="0%" HorizontalAlignment="Left" Margin="181,103,0,0" VerticalAlignment="Top"/>
                     <Label Content="Mana:" HorizontalAlignment="Left" Margin="10,134,0,0" VerticalAlignment="Top"/>
                     <Slider x:Name="preview_mana_slider" HorizontalAlignment="Left" Margin="62,138,0,0" VerticalAlignment="Top" Width="114" Maximum="100" SmallChange="1" ValueChanged="preview_mana_slider_ValueChanged"/>
                     <Label x:Name="preview_mana_amount" Content="0%" HorizontalAlignment="Left" Margin="181,134,0,0" VerticalAlignment="Top"/>
-                </Grid>
-            </TabItem>
-            <TabItem Header="Color Zones">
-                <Grid>
-                    <Controls:ColorZones x:Name="cz" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="252" ColorZonesListUpdated="cz_ColorZonesListUpdated"/>
                 </Grid>
             </TabItem>
         </TabControl>

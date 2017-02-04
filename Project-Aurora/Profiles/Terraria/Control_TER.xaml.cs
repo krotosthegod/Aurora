@@ -38,15 +38,14 @@ namespace Aurora.Profiles.Terraria
             this.profilemanager.ProfileManager = profile_manager;
             this.scriptmanager.ProfileManager = profile_manager;
 
-            this.game_enabled.IsChecked = (profile_manager.Settings as TERSettings15).isEnabled;
-            this.cz.ColorZonesList = (profile_manager.Settings as TERSettings15).lighting_areas;
+            this.game_enabled.IsChecked = (profile_manager.Settings as TER_Settings).isEnabled;
         }
 
         private void game_enabled_Checked(object sender, RoutedEventArgs e)
         {
             if (IsLoaded)
             {
-                (profile_manager.Settings as TERSettings15).isEnabled = (this.game_enabled.IsChecked.HasValue) ? this.game_enabled.IsChecked.Value : false;
+                (profile_manager.Settings as TER_Settings).isEnabled = (this.game_enabled.IsChecked.HasValue) ? this.game_enabled.IsChecked.Value : false;
                 profile_manager.SaveProfiles();
             }
         }
@@ -127,7 +126,7 @@ namespace Aurora.Profiles.Terraria
         {
             if (IsLoaded)
             {
-                (profile_manager.Settings as TERSettings15).lighting_areas = (sender as ColorZones).ColorZonesList;
+                (profile_manager.Settings as TER_Settings).lighting_areas = (sender as ColorZones).ColorZonesList;
                 profile_manager.SaveProfiles();
             }
         }

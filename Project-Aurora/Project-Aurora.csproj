@@ -437,6 +437,7 @@
     </Compile>
     <Compile Include="Profiles\RocketLeague\Layers\RocketLeagueBackgroundLayerHandler.cs" />
     <Compile Include="Profiles\StringProperty.cs" />
+    <Compile Include="Profiles\Terraria\TER_Settings.cs" />
     <Compile Include="Profiles\Terraria\Control_TER.xaml.cs">
       <DependentUpon>Control_TER.xaml</DependentUpon>
     </Compile>
@@ -453,7 +454,6 @@
     <Compile Include="Profiles\Terraria\Layers\TERBackgroundLayerHandler.cs" />
     <Compile Include="Profiles\Terraria\Layers\TERStatesLayerHandler.cs" />
     <Compile Include="Profiles\Terraria\TERProfileManager.cs" />
-    <Compile Include="Profiles\Terraria\TERSettings15.cs" />
     <Compile Include="Profiles\Worms_WMD\Control_WormsWMD.xaml.cs">
       <DependentUpon>Control_WormsWMD.xaml</DependentUpon>
     </Compile>
@@ -1327,6 +1327,7 @@
     <Resource Include="Resources\Layers_Drag.png" />
     <Resource Include="Resources\Layers_Add.png" />
     <Resource Include="Resources\Layers_Remove.png" />
+    <None Include="Resources\ter_64x64.bmp" />
     <Content Include="Resources\ter_64x64.png" />
     <Content Include="SDKDLL.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

@@ -13,13 +13,13 @@ namespace Aurora.Profiles.Terraria
     public class TERProfileManager : ProfileManager
     {
         public TERProfileManager()
-            : base("Terraria", "ter", "terraria.exe", typeof(TERSettings15), typeof(Control_TER), new GameEvent_TER())
+            : base("Terraria", "ter", "terraria.exe", typeof(TER_Settings), typeof(Control_TER), new GameEvent_TER())
         {
             this.AvailableLayers.Add(Aurora.Settings.Layers.LayerType.TERBackground);
-            // this.AvailableLayers.Add(Aurora.Settings.Layers.LayerType.PD2Flashbang);
             this.AvailableLayers.Add(Aurora.Settings.Layers.LayerType.TERStates);
 
             IconURI = "Resources/unknown_app_icon.png";
+            //IconURI = "Resources/ter_64x64.png";
 
             System.Diagnostics.Debug.WriteLine("Creating TERProfileManager");
         }
