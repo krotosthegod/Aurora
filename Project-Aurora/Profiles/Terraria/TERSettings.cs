@@ -4,7 +4,7 @@ using System.Drawing;
 
 namespace Aurora.Profiles.Terraria
 {
-    public class TER_Settings : ProfileSettings
+    public class TERSettings : ProfileSettings
     {
         //Effects 
         //// Background 
@@ -49,7 +49,7 @@ namespace Aurora.Profiles.Terraria
         public List<ColorZone> lighting_areas { get; set; }
 
 
-        public TER_Settings()
+        public TERSettings()
         {
             //General
             isEnabled = true;

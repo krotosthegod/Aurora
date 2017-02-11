@@ -39,8 +39,8 @@
         <TabControl>
             <TabItem Header="Overview for Terraria">
                 <Grid>
-                    <TextBlock Margin="10,30,0,0" Text="In order for Terraria support to work, you have to install TModLoader and the GSI mod for Terraria. Please contact Demize for mortal assistance. For immortal assistance, please contact our Lord and Savior Krotos." VerticalAlignment="Top" TextWrapping="Wrap" HorizontalAlignment="Left" Width="770"/>
-                    <Button x:Name="get_hook_button" Content="Get BLT Hook" HorizontalAlignment="Left" Margin="10,83,0,0" VerticalAlignment="Top" Click="get_hook_button_Click"/>
+                    <TextBlock Margin="10,30,0,0" Text="In order for Terraria support to work, you have to install TModLoader and the GSI mod for Terraria." VerticalAlignment="Top" TextWrapping="Wrap" HorizontalAlignment="Left" Width="770"/>
+                    <Button x:Name="get_hook_button" Content="Get TerrariaGSI for TModLoader" HorizontalAlignment="Left" Margin="10,83,0,0" VerticalAlignment="Top" Click="get_hook_button_Click"/>
                     <Button x:Name="install_mod_button" Content="Install GSI for Terraria" HorizontalAlignment="Left" Margin="10,108,0,0" VerticalAlignment="Top" Click="install_mod_button_Click"/>
                     <CheckBox x:Name="game_enabled" Content="Enable Aurora to provide lighting effects with Terraria" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Checked="game_enabled_Checked" Unchecked="game_enabled_Checked"/>
                     <EnumPercentEffectType:Control_ProfileManager x:Name="profilemanager" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom"/>
