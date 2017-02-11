@@ -21,7 +21,9 @@ namespace Aurora.Profiles.Terraria
             IconURI = "Resources/unknown_app_icon.png";
             //IconURI = "Resources/ter_64x64.png";
 
+            System.Diagnostics.Debug.WriteLine("\n=======================================");
             System.Diagnostics.Debug.WriteLine("Creating TERProfileManager");
+            System.Diagnostics.Debug.WriteLine("=======================================\n");
         }
     }
 }

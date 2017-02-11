@@ -185,8 +185,10 @@ namespace Aurora
             }
             CurrentGameState = new GameState(JSON);
 
-            System.Diagnostics.Debug.WriteLine("Net List Rec ---------------------------------------------");
+            System.Diagnostics.Debug.WriteLine("\n=======================================");
+            System.Diagnostics.Debug.WriteLine("NetworkListener Recieved json");
             System.Diagnostics.Debug.WriteLine(CurrentGameState);
+            System.Diagnostics.Debug.WriteLine("=======================================\n");
         }
 
         private void RaiseOnNewGameState()

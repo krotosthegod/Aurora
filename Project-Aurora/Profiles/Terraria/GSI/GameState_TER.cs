@@ -51,9 +51,10 @@ namespace Aurora.Profiles.Terraria.GSI
             json = "{}";
             _ParsedData = Newtonsoft.Json.Linq.JObject.Parse(json);
 
-
+            System.Diagnostics.Debug.WriteLine("\n=======================================");
             System.Diagnostics.Debug.WriteLine("Creating GameState_TER - 1");
             System.Diagnostics.Debug.WriteLine(_ParsedData);
+            System.Diagnostics.Debug.WriteLine("=======================================\n");
         }
 
         /// <summary>
@@ -67,7 +68,9 @@ namespace Aurora.Profiles.Terraria.GSI
 
             json = JSONstring;
             _ParsedData = JObject.Parse(JSONstring);
+            System.Diagnostics.Debug.WriteLine("\n=======================================");
             System.Diagnostics.Debug.WriteLine("Creating GameState_TER - 2");
+            System.Diagnostics.Debug.WriteLine("=======================================\n");
         }
 
         /// <summary>
@@ -76,7 +79,9 @@ namespace Aurora.Profiles.Terraria.GSI
         /// <param name="other_state">The passed GameState</param>
         public GameState_TER(IGameState other_state) : base(other_state)
         {
+            System.Diagnostics.Debug.WriteLine("\n=======================================");
             System.Diagnostics.Debug.WriteLine("Creating GameState_TER - 3");
+            System.Diagnostics.Debug.WriteLine("=======================================\n");
         }
     }
 }

@@ -12,7 +12,9 @@ namespace Aurora.Profiles.Terraria
     {
         public GameEvent_TER() : base()
         {
-            System.Diagnostics.Debug.WriteLine("Creating GameEvent");
+            System.Diagnostics.Debug.WriteLine("\n=======================================");
+            System.Diagnostics.Debug.WriteLine("Creating GameEvent_TER");
+            System.Diagnostics.Debug.WriteLine("=======================================\n");
         }
 
         public override void UpdateLights(EffectFrame frame)
@@ -35,7 +37,9 @@ namespace Aurora.Profiles.Terraria
 
             frame.AddLayers(layers.ToArray());
 
+            System.Diagnostics.Debug.WriteLine("\n=======================================");
             System.Diagnostics.Debug.WriteLine("UpdateLights() - 1");
+            System.Diagnostics.Debug.WriteLine("=======================================\n");
         }
 
         public override void UpdateLights(EffectFrame frame, IGameState new_game_state)
@@ -55,7 +59,9 @@ namespace Aurora.Profiles.Terraria
                     Global.logger.LogLine(gs.ToString(), Logging_Level.None);
                 }
             }
+            System.Diagnostics.Debug.WriteLine("\n=======================================");
             System.Diagnostics.Debug.WriteLine("UpdateLights() - 2");
+            System.Diagnostics.Debug.WriteLine("=======================================\n");
         }
 
         public override void ResetGameState()

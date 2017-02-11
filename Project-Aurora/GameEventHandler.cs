@@ -357,6 +357,16 @@ namespace Aurora
                             resolved_state = true;
                         }
                         break;
+                    case "105600":
+                        if (process_name.EndsWith("terraria.exe") && profiles.ContainsKey(process_name) && profiles[process_name].IsEnabled())
+                        {
+                            System.Diagnostics.Debug.WriteLine("\n=======================================");
+                            System.Diagnostics.Debug.WriteLine("GameEventHandler - GameState_TER(gs)");
+                            System.Diagnostics.Debug.WriteLine("=======================================\n");
+                            profiles[process_name].UpdateLights(newframe, new Profiles.Terraria.GSI.GameState_TER(gs));
+                            resolved_state = true;
+                        }
+                        break;
                     case "0":
                         if (process_name.EndsWith("gta5.exe") && Newtonsoft.Json.Linq.JObject.Parse(gs.GetNode("provider")).GetValue("name").ToString().ToLowerInvariant().Equals("gta5.exe") && profiles.ContainsKey(process_name) && profiles[process_name].IsEnabled())
                         {
